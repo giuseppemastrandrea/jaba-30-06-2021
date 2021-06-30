@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Title</title>
+  <link rel="stylesheet" href="static/bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+
+  <style>
+      .container{
+          background: #20c997;
+      }
+
+      form input{
+          width: 100%;
+      }
+
+      /*
+
+        <div class="container">
+          <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+          </div>
+          ...
+        </div>
+
+      */
+      .card{
+          background-color: #ffffff;
+      }
+
+      .thumbnail{
+          padding-top: 50px;
+          padding-bottom: 50px;
+          background-color: #0c4128;
+          color: #fff;
+      }
+
+  </style>
+
+</head>
+<body>
+<section>
+  <h1 class="text-center">
+    Classe "col"
+  </h1>
+
+  <p class="text-center">
+    La classe "col" distribuisce uniformemente lo spazio a tutte le colonne presenti su una riga.
+    <br />
+    Ad esempio:
+  </p>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="thumbnail">
+            Thumbnail
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet
+          </p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card">
+          <div class="thumbnail">
+            Thumbnail
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <h1 class="text-center">
+    Classe "col" con varianti responsive
+  </h1>
+
+  <p class="text-center">
+    La classe "col" ha le sue varianti responsive:
+    col-sm, col-md, col-lg, ...
+    <br />
+    Ad esempio per fare in modo che una colonna sia tale solo a partire da tablet in poi:
+  </p>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <div class="card">
+          Contenuto di prova
+        </div>
+      </div>
+
+      <div class="col-md">
+        <div class="card">
+          Contenuto di prova
+        </div>
+      </div>
+
+      <div class="col-md">
+        <div class="card">
+          Contenuto di prova
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section>
+  <h1 class="text-center">
+    Classe "col" con differenti larghezze di colonna
+  </h1>
+
+  <p class="text-center">
+    La classe "col" è utile se tutte le colonne hanno la stessa larghezza.
+    <br />
+    Se sulla stessa riga ci sono colonne con larghezza diversa siamo costretti ad utilizzare
+    un'altra variante di col:
+  </p>
+
+  <ul>
+    <li>classe col-1 -> la colonna occupa 1/12 della riga su cui si trova </li>
+    <li>classe col-2 -> la colonna occupa 2/12 della riga su cui si trova </li>
+    <li>classe col-3 -> la colonna occupa 3/12 della riga su cui si trova </li>
+    <li>classe col-4 -> la colonna occupa 4/12 della riga su cui si trova </li>
+    <li> ... </li>
+    <li>classe col-12 -> la colonna occupa 12/12 della riga su cui si trova quindi occupa tutta la riga </li>
+  </ul>
+
+  <p class="text-center">
+    Ad esempio per fare due colonne una grande 8/12 e l'altra grande 4/12:
+  </p>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <div class="card">
+          <div class="thumbnail">
+            Thumbnail
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet
+          </p>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card">
+          <div class="thumbnail">
+            Thumbnail
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="text-center">
+    Oppure se voglio una colonna che occupa metà della riga e 2 che occupano in maniera
+    uguale lo spazio rimanente:
+  </p>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <div class="card">
+          <div class="thumbnail">
+            Thumbnail
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet
+          </p>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card">
+          <div class="thumbnail">
+            Thumbnail
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<section>
+  <h1 class="text-center">
+    Classe "col-*" con varianti responsive
+  </h1>
+  <p class="text-center">
+    Posso combinare le classi col-* con i breakpoint. Ecco alcuni esempi:
+  </p>
+  <ul>
+    <li>Se assegno ad una colonna le classi col-12 e col-md-6:
+      <ul>
+        <li>su mobile e fino a 767px la colonna occuperà
+          tutta la riga (12/12) </li>
+        <li>mentre da tablet in su occuperà 6/12</li>
+      </ul>
+    </li>
+
+    <li>Se assegno ad una colonna le classi col-8 e col-md-6 col-xxl-2:
+      <br />
+      <ul>
+        <li>Su mobile occuperà 8/12 </li>
+        <li>Da 768px occuperà 6/12 </li>
+        <li>Da 1400px occuperà 2/12 </li>
+      </ul>
+    </li>
+
+    <li>Se assegno ad una colonna le classi col-lg-6 e col-xxl-4:
+      <br />
+      <ul>
+        <li>
+          Su mobile e fino a 991px non avendo specificato alcun comportamento la colonna
+          occuperà il 100% della riga
+        </li>
+        <li>
+          Da 992px in poi occuperà 6/12
+        </li>
+
+        <li>
+          Da 1400px in poi occuperà 4/12
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <div class="thumbnail">
+            Thumbnail
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <div class="thumbnail">
+            Thumbnail
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <div class="thumbnail">
+            Thumbnail
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <div class="thumbnail">
+            Thumbnail
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <div class="thumbnail">
+            Thumbnail
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <div class="thumbnail">
+            Thumbnail
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+  <h1 class="text-center">
+    Classe "offset-*"
+  </h1>
+  <p class="text-center">
+    Posso usare le classi (anche responsive) offset-* per staccare una colonna di un certo
+    spazio dalle altre o dal bordo sx
+  </p>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-8 offset-md-2">
+        <p class="text-md-center">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section>
+  <h1 class="text-center">
+    Form
+  </h1>
+  <form>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 offset-md-4">
+          <div class="label">
+            <label for="name">Nome</label>
+          </div>
+          <div class="fieldWrapper">
+            <input type="text" name="name" id="name" placeholder="Inserisci un nome"/>
+          </div>
+          <div class="validation">
+            <p class="error">Campo obbligatorio</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-4 offset-md-4">
+          <div class="label">
+            <label for="last_name">Cognome</label>
+          </div>
+          <div class="fieldWrapper">
+            <input type="text" name="last_name" id="last_name" placeholder="Inserisci un cognome"/>
+          </div>
+          <div class="validation">
+            <p class="error">Campo obbligatorio</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
+</body>
+</html>
