@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Title</title>
+  <link rel="stylesheet" href="static/bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+
+  <style>
+      body{
+          background-color: #F3F3F3;
+      }
+    .hero{
+        background-color: #20c997;
+        min-height: 100vh;
+    }
+
+    .heroBox{
+        background-color: #C4C4C4;
+        padding: 65px 57px;
+        font-size: 21px;
+    }
+
+    @media (min-width: 768px){
+        .heroBox{
+            font-size: 36px;
+        }
+    }
+
+    .hasBottomBorder{
+        border-bottom: 2px solid #000;
+    }
+
+    .hasTopBorder{
+        border-top: 2px solid #000;
+    }
+
+    input{
+        width: 100%;
+        height: 56px;
+        border: 1px solid #000000;
+        padding: 0 5px
+    }
+
+  </style>
+</head>
+<body>
+  <section class="hero d-flex justify-content-center align-items-center">
+    <div class="heroBox text-center">
+      Welcome to <br > my wonderful house
+    </div>
+  </section>
+
+  <section class="mainArticle">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 offset-md-2">
+          <article class="hasBottomBorder text-md-center">
+            <p>Lorem ipsum</p>
+            <img
+              class="img-fluid"
+              src="https://images.pexels.com/photos/5799238/pexels-photo-5799238.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+              />
+            <p>Lorem ipsum</p>
+            <p>Lorem ipsum</p>
+            <p>Lorem ipsum</p>
+            <ul>
+              <li>
+                Bla bla bla
+              </li>
+              <li>
+                Bla bla bla bla
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="newsletterSubscribe">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 offset-md-4">
+          <div class="formWrapper text-md-center">
+            <h2 class="sectionTitle">Join Our Newsletter</h2>
+            <form>
+              <div class="formRow">
+                <div class="labelWrapper">
+                  <label for="first_name">Nome:</label>
+                </div>
+                <div class="fieldWrapper">
+                  <input type="text" name="first_name" id="first_name" placeholder="Inserisci il tuo nome di battesimo"/>
+                </div>
+                <div class="msg">
+                  <p class="error">Campo obbligatorio</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 offset-md-2">
+          <div class="hasTopBorder">
+            © 2021 - Company
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
